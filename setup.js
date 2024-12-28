@@ -44,13 +44,13 @@ async function main() {
             const deviceIdentifier = await generateDeviceIdentifier();
 
             const logEntry = `Device Identifier ${i + 1}: ${chalk.green(deviceIdentifier)}\n`;
-            const formattedEntry = `input-publicKey-from-extension:${deviceIdentifier}\n`;
+            const formattedEntry = `${deviceIdentifier}\n`;
             output += formattedEntry;
             console.log(logEntry);
         }
 
-        fs.writeFileSync('id.txt', output);
-        console.log(chalk.yellow('Data saved to id.txt'));
+        
+        console.log(chalk.yellow('Please Save nodeid:deviceID in id.txt'));
 
         rl.close();
     });
